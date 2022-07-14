@@ -1,0 +1,19 @@
+﻿name: publish to nuget
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: dotnet build --configuration Release
+      - name: Pack
+        run: dotnet pack --configuration Release --no-build --output .
+      - name: Push
+        run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}}
+      - name: PushGit
+        run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/kapiosk/index.json --api-key ${{secrets.GITHUB_TOKEN}}

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+	  <SccProjectName>SAK</SccProjectName>
+	  <SccProvider>SAK</SccProvider>
+	  <SccAuxPath>SAK</SccAuxPath>
+	  <SccLocalPath>SAK</SccLocalPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>_3ai.solutions.AzureStorage</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>2.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2000-01-01"))).TotalDays).$([System.DateTime]::UtcNow.Hour)</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="3ai.solutions.Core" Version="2.8230.23" />
+	  <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
+	</ItemGroup>
+
+</Project>
