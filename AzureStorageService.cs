@@ -9,7 +9,7 @@ namespace _3ai.solutions.AzureStorage
 {
     public class AzureStorageService : IStorageService
     {
-        private readonly string _connectionString;
+        private readonly string _connectionString; 
         private readonly string _accountKey;
         private readonly string _accountName;
         private readonly int _SASTTL;
