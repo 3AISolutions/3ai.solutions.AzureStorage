@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup Label="Globals">
-	  <SccProjectName>SAK</SccProjectName>
-	  <SccProvider>SAK</SccProvider>
-	  <SccAuxPath>SAK</SccAuxPath>
-	  <SccLocalPath>SAK</SccLocalPath>
+		<SccProjectName>SAK</SccProjectName>
+		<SccProvider>SAK</SccProvider>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccLocalPath>SAK</SccLocalPath>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -13,11 +13,19 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Version>2.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2000-01-01"))).TotalDays).$([System.DateTime]::UtcNow.Hour)</Version>
+		<PackageDescription>Implementation of 3ai.solutions storage interface for AzureStorage</PackageDescription>
+		<RepositoryUrl>https://github.com/kapiosk/3ai.solutions.AzureStorage/</RepositoryUrl>
 	</PropertyGroup>
-
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="3ai.solutions.Core" Version="2.8230.23" />
-	  <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
+		<None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
+		<None Include="README.md" Pack="true" PackagePath="README.md"/>
 	</ItemGroup>
-
+	<ItemGroup>
+		<PackageReference Include="3ai.solutions.Core" Version="2.8230.23" />
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
+	</ItemGroup>
 </Project>
