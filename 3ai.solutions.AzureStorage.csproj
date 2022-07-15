@@ -14,7 +14,7 @@
 		<Nullable>enable</Nullable>
 		<Version>2.$([System.DateTime]::UtcNow.Date.Subtract($([System.DateTime]::Parse("2000-01-01"))).TotalDays).$([System.DateTime]::UtcNow.Hour)</Version>
 		<PackageDescription>Implementation of 3ai.solutions storage interface for AzureStorage</PackageDescription>
-		<RepositoryUrl>https://github.com/kapiosk/3ai.solutions.AzureStorage/</RepositoryUrl>
+		<RepositoryUrl>https://github.com/kapiosk/3ai.solutions.AzureStorage/</RepositoryUrl> 
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

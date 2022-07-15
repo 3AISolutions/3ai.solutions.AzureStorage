@@ -18,7 +18,7 @@ namespace _3ai.solutions.AzureStorage
         {
             _connectionString = azureStorageSettings.ConnectionString;
             _accountKey = azureStorageSettings.AccountKey;
-            _accountName = azureStorageSettings.AccountName;
+            _accountName = azureStorageSettings.AccountName; 
             _SASTTL = azureStorageSettings.SASTTL;
         }
 
